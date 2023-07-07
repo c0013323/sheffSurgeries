@@ -1,4 +1,4 @@
-package grailsproject
+package appointmentsystem
 
 class BootStrap {
 
