@@ -6,6 +6,7 @@
 </head>
 <body>
 <content tag="nav">
+    <!--
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Application Status <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -33,35 +34,42 @@
             <li class="dropdown-item"><a href="#">Tag Libraries: ${grailsApplication.tagLibClasses.size()}</a></li>
         </ul>
     </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Installed Plugins <span class="caret"></span></a>
+    -->
+    <!--<li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tables <span class="caret"></span></a>
         <ul class="dropdown-menu dropdown-menu-right">
-            <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-                <li class="dropdown-item"><a href="#">${plugin.name} - ${plugin.version}</a></li>
+            <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+                <li class="controller">
+                    <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
+                </li>
             </g:each>
+            <button class="buttons" onclick="window.location.href='/appointment/index';">Appointments</li>
+            <button class="buttons" onclick="window.location.href='/doctor/index';">Doctors</li>
+            <button class="buttons" onclick="window.location.href='/nurse/index';">Nurses</li>
+            <button class="buttons" onclick="window.location.href='/patient/index';">Patients</li>
+            <button class="buttons" onclick="window.location.href='/prescription/index';">Prescriptions</li>
+            <button class="buttons" onclick="window.location.href='/receptionist/index';">Receptionists</li>
+            <button class="buttons" onclick="window.location.href='/surgery/index';">Surgeries</li>
         </ul>
-    </li>
+    </li>-->
 </content>
 
 <div class="svg" role="presentation">
     <div class="grails-logo-container">
-        <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
+        <asset:image src="logo.png" class="grails-logo"/>
     </div>
 </div>
 
 <div id="content" role="main">
     <div class="container">
         <section class="row colset-2-its">
-            <h1>Welcome to Grails</h1>
+            <h1>Welcome to the System Architectures Surgery</h1>
 
-            <p>
-                Congratulations, you have successfully started your first Grails application! At the moment
-                this is the default page, feel free to modify it to either redirect to a controller or display
-                whatever content you may choose. Below is a list of controllers that are currently deployed in
-                this application, click on each to execute its default action:
-            </p>
+            <h1>
+                We provide the highest quality surgical procedures at the best prices.
+            </h1>
 
-            <div id="controllers" role="navigation">
+            <!--<div id="controllers" role="navigation">
                 <h2>Available Controllers:</h2>
                 <ul>
                     <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
@@ -70,7 +78,7 @@
                         </li>
                     </g:each>
                 </ul>
-            </div>
+            </div>-->
         </section>
     </div>
 </div>

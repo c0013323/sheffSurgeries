@@ -18,7 +18,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top" role="navigation">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/#"><asset:image src="grails.svg" alt="Grails Logo"/></a>
+        <a class="navbar-brand" href="/#"><asset:image src="smalllogo.png" alt="Grails Logo"/></a>
+        <h1 class="navbar-brand">System Architectures Surgery</h1>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,11 +30,19 @@
             </ul>
         </div>
     </div>
+    <div tag="">
+    <button class="buttons" onclick="window.location.href='/appointment/index';">Appointments</li>
+    <button class="buttons" onclick="window.location.href='/doctor/index';">Doctors</li>
+    <button class="buttons" onclick="window.location.href='/nurse/index';">Nurses</li>
+    <button class="buttons" onclick="window.location.href='/patient/index';">Patients</li>
+    <button class="buttons" onclick="window.location.href='/prescription/index';">Prescriptions</li>
+    <button class="buttons" onclick="window.location.href='/receptionist/index';">Receptionists</li>
+    <button class="buttons" onclick="window.location.href='/surgery/index';">Surgeries</li>
 </nav>
 
 <g:layoutBody/>
 
-<div class="footer" role="contentinfo">
+<!--<div class="footer" role="contentinfo">
     <div class="container-fluid">
         <div class="row">
             <div class="col">
@@ -61,7 +70,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 
 <div id="spinner" class="spinner" style="display:none;">
     <g:message code="spinner.alt" default="Loading&hellip;"/>
